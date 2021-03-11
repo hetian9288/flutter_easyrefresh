@@ -16,7 +16,7 @@ abstract class Footer {
   final bool float;
 
   // 完成延时
-  final Duration? completeDuration;
+  final Duration completeDuration;
 
   /// 是否开启无限加载
   final bool enableInfiniteLoad;
@@ -37,7 +37,7 @@ abstract class Footer {
     this.extent = 60.0,
     this.triggerDistance = 70.0,
     this.float = false,
-    this.completeDuration,
+    this.completeDuration = const Duration(seconds: 2),
     this.enableInfiniteLoad = true,
     this.enableHapticFeedback = false,
     this.overScroll = false,

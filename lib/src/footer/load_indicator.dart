@@ -483,7 +483,7 @@ class EasyRefreshSliverLoadControl extends StatefulWidget {
   final OnLoadCallback? onLoad;
 
   /// 完成延时
-  final Duration? completeDuration;
+  final Duration completeDuration;
 
   /// 绑定加载指示器
   final BindLoadIndicator? bindLoadIndicator;
@@ -722,11 +722,11 @@ class _EasyRefreshSliverLoadControlState
       // 判断加载完成
       LoadMode state = LoadMode.loaded;
       // 添加延时
-      if (widget.completeDuration == null || widget.enableInfiniteLoad) {
+      if (widget.enableInfiniteLoad) {
         goToDone();
         return null;
       } else {
-        Future.delayed(widget.completeDuration!, () {
+        Future.delayed(widget.completeDuration, () {
           if (mounted) {
             goToDone();
           }
@@ -914,7 +914,7 @@ class _EasyRefreshSliverLoadControlState
                 widget.loadIndicatorExtent,
                 _axisDirectionNotifier.value,
                 widget.footerFloat,
-                widget.completeDuration!,
+                widget.completeDuration,
                 widget.enableInfiniteLoad,
                 _success ?? true,
                 _noMore ?? false,
