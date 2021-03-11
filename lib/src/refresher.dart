@@ -236,13 +236,13 @@ class _EasyRefreshState extends State<EasyRefresh> {
   late bool _enableFirstRefresh = false;
 
   // 首次刷新组件
-  late Header? _firstRefreshHeader;
+  Header? _firstRefreshHeader;
 
   // Footer
   Footer get _footer => widget.footer ?? EasyRefresh._defaultFooter;
 
   // 子组件的ScrollController
-  late ScrollController? _childScrollController;
+  ScrollController? _childScrollController;
 
   // ScrollController
   ScrollController? get _scrollerController {
@@ -639,7 +639,7 @@ class EasyRefreshController {
   }
 
   /// 完成刷新
-  late FinishRefresh? finishRefreshCallBack;
+  FinishRefresh? finishRefreshCallBack;
 
   void finishRefresh({
     required bool success,
@@ -651,7 +651,7 @@ class EasyRefreshController {
   }
 
   /// 完成加载
-  late FinishLoad? finishLoadCallBack;
+  FinishLoad? finishLoadCallBack;
 
   void finishLoad({
     required bool success,
@@ -663,7 +663,7 @@ class EasyRefreshController {
   }
 
   /// 恢复刷新状态(用于没有更多后)
-  late VoidCallback? resetRefreshStateCallBack;
+  VoidCallback? resetRefreshStateCallBack;
 
   void resetRefreshState() {
     if (resetRefreshStateCallBack != null) {
@@ -681,7 +681,7 @@ class EasyRefreshController {
   }
 
   // 状态
-  late _EasyRefreshState? _easyRefreshState;
+  _EasyRefreshState? _easyRefreshState;
 
   // 绑定状态
   void _bindEasyRefreshState(_EasyRefreshState state) {

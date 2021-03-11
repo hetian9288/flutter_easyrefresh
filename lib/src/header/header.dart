@@ -510,7 +510,7 @@ class ClassicalHeaderWidgetState extends State<ClassicalHeaderWidget>
   late double _iconRotationValue = 1.0;
 
   // 浮动时,收起距离
-  late double? _floatBackDistance;
+  double? _floatBackDistance;
 
   // 显示文字
   String get _showText {

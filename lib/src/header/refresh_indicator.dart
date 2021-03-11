@@ -597,10 +597,10 @@ class _EasyRefreshSliverRefreshControlState
   bool get _focus => widget.focusNotifier.value;
 
   // 刷新完成
-  late bool? _success;
+  bool? _success;
 
   // 没有更多数据
-  late bool? _noMore;
+  bool? _noMore;
 
   // 列表方向
   late ValueNotifier<AxisDirection> _axisDirectionNotifier;
